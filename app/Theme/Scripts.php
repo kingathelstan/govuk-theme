@@ -15,12 +15,12 @@ class Scripts implements \Dxw\Iguana\Registerable
 		add_action('wp_enqueue_scripts', [$this, 'wpEnqueueScripts']);
 		add_action('enqueue_block_editor_assets', [$this, 'wpEnqueueEditorScripts']);
 		add_theme_support('editor-styles');
-		add_editor_style('../static/editor.min.css');
+		add_editor_style(get_template_directory_uri().'/static/editor.min.css');
 	}
 
 	public function getAssetPath($path)
 	{
-		return dirname(get_template_directory_uri()).'/static/'.$path;
+		return get_template_directory_uri().'/static/'.$path;
 	}
 
 	public function assetPath($path)
@@ -46,6 +46,6 @@ class Scripts implements \Dxw\Iguana\Registerable
 
 	public function wpEnqueueEditorScripts()
 	{
-		wp_enqueue_script('theme-editor', $this->getAssetPath('editor.min.js'), ['wp-blocks', 'wp-dom'], filemtime(get_stylesheet_directory() . '/../assets/js/editor.js'), true);
+		wp_enqueue_script('theme-editor', $this->getAssetPath('editor.min.js'), ['wp-blocks', 'wp-dom'], filemtime(get_template_directory() . '/assets/js/editor.js'), true);
 	}
 }
