@@ -39,4 +39,4 @@ You can use the `govuk_theme_class` filter to help with this. It is applied to a
 
 You can also replace any of the individual template components, up to and including the overall layout template, in the child theme as required.
 
-Note that the GDS Transport theme is only licensed for use on gov.uk domains, so if you're developing a theme for use elsewhere, you'll need to replace it with a suitable alternative.
+Note that the GDS Transport font is only licensed for use on gov.uk domains, so if you're developing a theme for use elsewhere, you'll need to replace it with a suitable alternative.
