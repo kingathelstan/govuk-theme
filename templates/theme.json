@@ -39,7 +39,7 @@
       "fontSizes": [
         {
           "name": "Small",
-          "slug": "normal",
+          "slug": "small",
           "size": "1rem"
         },
         {
